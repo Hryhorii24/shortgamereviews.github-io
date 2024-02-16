@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>Шаблони відгуків на ігри</title>
+	<!-- Link to CSS stylesheet -->
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<!-- Navigation bar -->
+	<nav>
+        <select id="template-select">
+            <option value="#template1" class="active">Стандартний шаблон</option>
+            <option value="#template2">Шаблон 2</option>
+
+        </select>
+	</nav>
+
+    <div class="myClass">
+        <h3>Текстова частина вашого відгуку</h3>
+        <textarea id="copyText" rows="3" cols="50" placeholder="Введіть щось сюди" oninput="autoResize(this)"></textarea>
+    </div>
+
+    <!-- <div class="myClass">
+        <h3>Додаткові налаштування</h3>
+        <label><input type="checkbox" id="copyCheckbox" onchange="copyOptions()" />Відображати всі опції категорій в кінцевому тексті</label>
+    </div>       -->
+
+	<!-- Template 1 -->
+	<section id="template1" class="template active">
+        <div class="myClass">
+            <h3>Графіка 📺</h3>
+            <label><input type="radio" name="graphics" onchange="setRadioValue(this)" />Ви забули, що таке реальність</label>
+            <label><input type="radio" name="graphics" onchange="setRadioValue(this)" />Красиво</label>
+            <label><input type="radio" name="graphics" onchange="setRadioValue(this)" />Добре</label>
+            <label><input type="radio" name="graphics" onchange="setRadioValue(this)" />Прийнятно</label>
+            <label><input type="radio" name="graphics" onchange="setRadioValue(this)" />Погано</label>
+            <label><input type="radio" name="graphics" onchange="setRadioValue(this)" />Не дивіться на це занадто довго</label>
+            <label><input type="radio" name="graphics" onchange="setRadioValue(this)" />MS-DOS</label>
+        </div>
+
+        <div class="myClass">
+            <h3>Геймплей 🕹</h3>
+            <label><input type="radio" name="gameplay" onchange="setRadioValue(this)" />Дуже добре</label>
+            <label><input type="radio" name="gameplay" onchange="setRadioValue(this)" />Добре</label>
+            <label><input type="radio" name="gameplay" onchange="setRadioValue(this)" />Просто геймплей</label>
+            <label><input type="radio" name="gameplay" onchange="setRadioValue(this)" />Мені байдуже</label>
+            <label><input type="radio" name="gameplay" onchange="setRadioValue(this)" />Дивитись, як фарба висихає, краще</label>
+            <label><input type="radio" name="gameplay" onchange="setRadioValue(this)" />Просто не треба</label>
+        </div>
+
+        <div class="myClass">
+            <h3>Аудіо 🔊</h3>
+            <label><input type="radio" name="audio" onchange="setRadioValue(this)" />Вухові оргазми</label>
+            <label><input type="radio" name="audio" onchange="setRadioValue(this)" />Дуже добре</label>
+            <label><input type="radio" name="audio" onchange="setRadioValue(this)" />Добре</label>
+            <label><input type="radio" name="audio" onchange="setRadioValue(this)" />Непогано</label>
+            <label><input type="radio" name="audio" onchange="setRadioValue(this)" />Погано</label>
+            <label><input type="radio" name="audio" onchange="setRadioValue(this)" />Я тепер глухий</label>
+        </div>
+        
+        <div class="myClass">
+            <h3>Аудиторія 🔞</h3>
+            <label><input type="radio" name="audience" onchange="setRadioValue(this)" />Діти</label>
+            <label><input type="radio" name="audience" onchange="setRadioValue(this)" />Підлітки</label>
+            <label><input type="radio" name="audience" onchange="setRadioValue(this)" />Дорослі</label>
+            <label><input type="radio" name="audience" onchange="setRadioValue(this)" />Бабуся</label>
+        </div>
+        
+        <div class="myClass">
+            <h3>Вимоги до ПК 💻</h3>
+            <label><input type="radio" name="requirements" onchange="setRadioValue(this)" />Перевірте, чи можете запустити Paint</label>
+            <label><input type="radio" name="requirements" onchange="setRadioValue(this)" />Картопля</label>
+            <label><input type="radio" name="requirements" onchange="setRadioValue(this)" />Прийнятно</label>
+            <label><input type="radio" name="requirements" onchange="setRadioValue(this)" />Швидко</label>
+            <label><input type="radio" name="requirements" onchange="setRadioValue(this)" />Багатенький хлопчина</label>
+            <label><input type="radio" name="requirements" onchange="setRadioValue(this)" />Спитайте у NASA, чи є в них запасний комп'ютер</label>
+        </div>
+        
+        <div class="myClass">
+            <h3>Складність ⚙</h3>
+            <label><input type="radio" name="difficulty" onchange="setRadioValue(this)" />Просто натисніть «W»</label>
+            <label><input type="radio" name="difficulty" onchange="setRadioValue(this)" />Легко</label>
+            <label><input type="radio" name="difficulty" onchange="setRadioValue(this)" />Легко вивчити / Важко володіти</label>
+            <label><input type="radio" name="difficulty" onchange="setRadioValue(this)" />Суттєве використання мозку</label>
+            <label><input type="radio" name="difficulty" onchange="setRadioValue(this)" />Складно</label>
+            <label><input type="radio" name="difficulty" onchange="setRadioValue(this)" />Dark Souls</label>
+        </div>
+        
+        <div class="myClass">
+            <h3>Грінд ⏳</h3>
+            <label><input type="radio" name="grind" onchange="setRadioValue(this)" />Немає чого</label>
+            <label><input type="radio" name="grind" onchange="setRadioValue(this)" />Тільки якщо вам важливі лідерборди / ранки</label>
+            <label><input type="radio" name="grind" onchange="setRadioValue(this)" />Не потрібно для прогресу</label>
+            <label><input type="radio" name="grind" onchange="setRadioValue(this)" />Занадто багато</label>
+            <label><input type="radio" name="grind" onchange="setRadioValue(this)" />Вам знадобиться друге життя</label>
+        </div>
+                
+        <div class="myClass">
+            <h3>Сюжет 📖</h3>
+            <label><input type="radio" name="story" onchange="setRadioValue(this)" />Немає сюжету</label>
+            <label><input type="radio" name="story" onchange="setRadioValue(this)" />Деяка історія</label>
+            <label><input type="radio" name="story" onchange="setRadioValue(this)" />Середньо</label>
+            <label><input type="radio" name="story" onchange="setRadioValue(this)" />Добре</label>
+            <label><input type="radio" name="story" onchange="setRadioValue(this)" />Прекрасно</label>
+            <label><input type="radio" name="story" onchange="setRadioValue(this)" />Воно замінить ваше життя</label>
+        </div>
+                
+        <div class="myClass">
+            <h3>Час гри ⌚</h3>
+            <label><input type="radio" name="game-time" onchange="setRadioValue(this)" />Достатньо довго, щоб випити чашку кави</label>
+            <label><input type="radio" name="game-time" onchange="setRadioValue(this)" />Коротко</label>
+            <label><input type="radio" name="game-time" onchange="setRadioValue(this)" />Середньо</label>
+            <label><input type="radio" name="game-time" onchange="setRadioValue(this)" />Довго</label>
+            <label><input type="radio" name="game-time" onchange="setRadioValue(this)" />До безкінечності і далі</label>
+        </div>
+
+        <div class="myClass">
+            <h3>Ціна 💵</h3>
+            <label><input type="radio" name="price" onchange="setRadioValue(this)" />Безкоштовно!</label>
+            <label><input type="radio" name="price" onchange="setRadioValue(this)" />Вартe своєї ціни</label>
+            <label><input type="radio" name="price" onchange="setRadioValue(this)" />Якщо є знижка</label>
+            <label><input type="radio" name="price" onchange="setRadioValue(this)" />Якщо у вас є зайві кошти</label>
+            <label><input type="radio" name="price" onchange="setRadioValue(this)" />Не рекомендується</label>
+            <label><input type="radio" name="price" onchange="setRadioValue(this)" />Ви також можете просто спалити свої гроші</label>
+        </div>
+
+        <div class="myClass">
+            <h3>Баги 🐜</h3>
+            <label><input type="radio" name="bugs" onchange="setRadioValue(this)" />Ніколи не чули про це</label>
+            <label><input type="radio" name="bugs" onchange="setRadioValue(this)" />Дрібні баги</label>
+            <label><input type="radio" name="bugs" onchange="setRadioValue(this)" />Може стати дратівливим</label>
+            <label><input type="radio" name="bugs" onchange="setRadioValue(this)" />ARK: Survival Evolved</label>
+            <label><input type="radio" name="bugs" onchange="setRadioValue(this)" />Сама гра є великим тераріумом для багів</label>
+        </div>
+
+        <div class="myClass">
+            <h3>? / 10 ❓</h3>
+            <label><input type="radio" name="rating" onchange="setRadioValue(this)" />0</label>
+            <label><input type="radio" name="rating" onchange="setRadioValue(this)" />1</label>
+            <label><input type="radio" name="rating" onchange="setRadioValue(this)" />2</label>
+            <label><input type="radio" name="rating" onchange="setRadioValue(this)" />3</label>
+            <label><input type="radio" name="rating" onchange="setRadioValue(this)" />4</label>
+            <label><input type="radio" name="rating" onchange="setRadioValue(this)" />5</label>
+            <label><input type="radio" name="rating" onchange="setRadioValue(this)" />6</label>
+            <label><input type="radio" name="rating" onchange="setRadioValue(this)" />7</label>
+            <label><input type="radio" name="rating" onchange="setRadioValue(this)" />8</label>
+            <label><input type="radio" name="rating" onchange="setRadioValue(this)" />9</label>
+            <label><input type="radio" name="rating" onchange="setRadioValue(this)" />10</label>
+        </div>
+	</section>
+
+	<!-- Template 2 -->
+	<section id="template2" class="template">
+        <div class="myClass">
+            <h3>Графіка 📺</h3>
+            <label><input type="radio" name="graphics" onchange="setRadioValue(this)" />2222You forget what reality is</label>
+            <label><input type="radio" name="graphics" onchange="setRadioValue(this)" />Beautiful</label>
+            <label><input type="radio" name="graphics" onchange="setRadioValue(this)" />Good</label>
+            <label><input type="radio" name="graphics" onchange="setRadioValue(this)" />Decent</label>
+            <label><input type="radio" name="graphics" onchange="setRadioValue(this)" />Bad</label>
+            <label><input type="radio" name="graphics" onchange="setRadioValue(this)" />Don‘t look too long at it</label>
+            <label><input type="radio" name="graphics" onchange="setRadioValue(this)" />MS-DOS</label>
+        </div>
+
+        <div class="myClass">
+            <h3>Звук 🔊</h3>
+            <label><input type="radio" name="sound" onchange="setRadioValue(this)" />2222Horrible</label>
+            <label><input type="radio" name="sound" onchange="setRadioValue(this)" />OK</label>
+            <label><input type="radio" name="sound" onchange="setRadioValue(this)" />Good</label>
+            <label><input type="radio" name="sound" onchange="setRadioValue(this)" />fdsfsfdsfdsfsdAmazing</label>
+        </div>
+	</section>
+
+
+	<!-- Link to JavaScript file -->
+	<script src="script.js"></script>
+
+    <button onclick="copyToClipboard()">Copy to clipboard</button>
+    
+    <footer>
+        <p>Copyright © 2023 | Григорій Неcковорода ЄУК member</p>
+    </footer>
+
+</body>
+</html>

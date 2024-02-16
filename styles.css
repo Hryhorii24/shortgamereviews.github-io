@@ -1,0 +1,161 @@
+/* Style for the overall body */
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: #f4f4f4;
+	color: #333;
+	margin: 0;
+}
+
+/* Style for the navigation bar */
+nav {
+	background-color: #333;
+	margin: auto;
+	padding: 20px 20px;
+	max-width: 600px;
+	border: 1px solid #ddd; 
+	border-radius: 10px; 
+	background-color: #555;
+}
+
+
+/* Style the select element */
+#template-select {
+	font-size: 1.2em;
+	font-weight: bold;
+	padding: 10px 10px;
+	border: none;
+	border-radius: 10px;
+	background-color: #f1f1f1;
+	color: #555;
+	/* appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none; */
+	cursor: pointer;
+	outline: none;
+}
+
+/* Style the options in the dropdown */
+#template-select option {
+	font-size: 1.0em;
+	font-weight: bold;
+	margin: 10px;
+	padding: 10px 30px;
+	border: none;
+	border-radius: 10px;
+	background-color: #f1f1f1;
+	color: #555;
+	/* appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none; */
+	cursor: pointer;
+	outline: sol;
+}
+
+/* Style the selected option */
+#template-select:hover {
+	background-color: #555;
+	color: #f1f1f1;
+	}
+
+/* Style the selected option */
+#template-select option:checked {
+	background-color: #555;
+	color: white;
+}
+
+
+/* Style for the div container */
+.myClass {
+	margin: 20px auto;
+	padding: 20px;
+	max-width: 600px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+}
+
+textarea {
+	min-width: 100%; 
+	max-width: 100%;
+	min-height: 100px; 
+	display: block;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-sizing: border-box;
+	font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 1.2em;
+}
+
+/* Style for the h3 heading */
+h3 {
+	margin-top: 0px;
+	margin-bottom: 20px;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+/* Style for the label element */
+label {
+	display: block;
+	/* margin-bottom: 5px; */
+	padding: 10px;
+	/* border: none; */
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1.0em;
+	font-weight: bold;
+	/* transition: background-color 0.5s ease-in-out; */
+}
+
+label:hover {
+	background-color: #c6c6c6;
+}
+
+/* Style for the radio button */
+	input[type="radio"] {
+	margin-right: 10px;
+}
+
+/* Style for the checkbox button */
+input[type="checkbox"] {
+	margin-right: 10px;
+}
+
+/* Style for the button element */
+button {
+	display: block;
+	margin: 20px auto;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: #333;
+	color: #fff;
+	font-size: 1.5em;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+	background-color: #c6c6c6;
+}
+
+
+/* Style for the templates */
+.template {
+	display: none;
+}
+
+.active {
+	display: block;
+}
+
+
+footer {
+    padding: 20px;
+    text-align: center;
+}
